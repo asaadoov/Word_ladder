@@ -1,0 +1,117 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 20vmin;
+}
+
+.App-header {
+  min-height: 2vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  font-weight: 500;
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: url(./bg.jpg) no-repeat;
+  background-size: cover;
+}
+
+.Input {
+  width: 80%;
+  margin: 50px auto;
+}
+.inputBox {
+  width: 380px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f1f2f5;
+}
+
+.inputBox h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+  border-bottom: 6px solid #3498db;
+  margin-top: 80px;
+  padding: 20px 0px;
+  margin: 30px 0;
+}
+
+.text {
+  margin-top: 0;
+  text-align: left;
+  line-height: 20px;
+}
+
+.textBox {
+  width: 100%;
+  overflow: hidden;
+  font-size: 20px;
+  padding: 4px 0;
+  margin: 4px 0;
+  display: block;
+  text-align: center;
+}
+
+.textBox input {
+  outline: none;
+  background: none;
+  color: white;
+  font-size: 18px;
+  width: 80%;
+  margin: 0 2px;
+  text-align: center;
+  border: 2px solid #3498db;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+.textBox input:focus {
+  width: 98%;
+  border-color: #2ecc71;
+}
+
+.btn {
+  outline: none;
+  background: none;
+  color: white;
+  font-size: 18px;
+  margin: 0 2px;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  border-radius: 24px;
+  width: 20%;
+  padding: 8px 4px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.btn:hover {
+  color: #2ecc71;
+  border-color: #3498db;
+}
