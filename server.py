@@ -30,7 +30,7 @@ def getInput():
             predecessors = bfs(start, finish, Graph)
             path = getPath(start, finish, predecessors)
             length = len(path)
-        return render_template("result.html", firstWord=word1, lastWord=word2, path=path, valid=valid, len=length)
+        return render_template("result.html", firstWord=word1, lastWord=word2, path=path, valid=valid, len=length)  
 
 
 if __name__ == '__main__':
