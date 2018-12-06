@@ -13,7 +13,7 @@ class Node:
         return result[:-1]
 
 def buildDice() :
-    pickleIn = open ("dict.pickle","rb")
+    pickleIn = open ("dict3.pickle","rb")
     w=pickle.load(pickleIn)
     # print (w)
     for key in w:
