@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/style.css') }}" />
+    <title>Word Ladder </title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+
+  </head>
+  
+  <body>
+    <div class="App">
+        <header class="App-header">
+          <img src="../static/logo.svg" class="App-logo" alt="logo" />
+        </header>  
+    
+        <div class="inputBox">
+            <h1>Word Ladder</h1>
+            <p class="text">
+              The word ladder problem helps in word transformation. Example is
+              Transform the word “FOOL” into the word “SAGE”. In a word ladder
+              puzzle you must make the change occur gradually by changing one letter at a time. <br><br> 
+              At each step
+              you must transform one word into another word, you are not allowed to
+              transform a word into a non-word. The word ladder puzzle was invented
+              in 1878 by Lewis Carroll, the author of Alice in Wonderland. The
+              following sequence of words shows one possible solution to the problem
+              posed
+              <pre>FOOL => POOL => POLE => PALE => SALE => SAGE</pre>
+            </p>
+
+            <p class="li1">{{msg}}</p>
+            <form action="."><input type="submit" class="btn" value="Again!"/>
+            </form>
+          </div>
+    
+    </div>
+  
+  <script
+    type="text/javascript"
+    src="{{ url_for('static', filename='home.js') }}"
+  ></script>
+</body>
+</html>

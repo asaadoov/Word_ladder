@@ -33,22 +33,18 @@
               </p>
               <div class="row">
                 <div class="result col-md-4">
-                    {% if (valid) %}
-                        <ul class="ul1">
-                            {% for word in path %}
-                                <li class="li1">{{ word }}</li>
+                    <ul class="ul1">
+                        {% for word in path %}
+                            <li class="li1">{{ word }}</li>
 
-                                {% if loop.index < len %}
-                                    <span><i class="fas fa-arrow-circle-down"></i></span>
-                                {% else %}
-                                    <span></span>
-                                {% endif %}
+                            {% if loop.index < len %}
+                                <span><i class="fas fa-arrow-circle-down"></i></span>
+                            {% else %}
+                                <span></span>
+                            {% endif %}
 
-                            {% endfor %}
-                        </ul>
-                    {% else %}
-                    <p>the length of the two words is different</p>
-                    {% endif %}
+                        {% endfor %}
+                    </ul>
                 </div> 
             </div>
             <form action="."><input type="submit" class="btn" value="Again!"/>

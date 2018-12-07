@@ -1,4 +1,6 @@
 import pickle
+
+
 def buildWordGraph(file):
     w = {}
     f = open(file)
@@ -14,11 +16,11 @@ def buildWordGraph(file):
             else:
                 w[wcard] = [word]
     return w
-   
 
-file="oxford_3000.txt"
-Dic=buildWordGraph(file) 
 
-pickleOut = open ("dict3.pickle","wb")
-pickle.dump (Dic, pickleOut)     
-pickleOut.close()  
+file = "oxford_3000.txt"
+Dic = buildWordGraph(file)
+
+pickleOut = open("dict3k.pickle", "wb")
+pickle.dump(Dic, pickleOut)
+pickleOut.close()

@@ -1,4 +1,6 @@
 import pickle
+
+
 class Node:
     def __init__(self, name):
         self.name = name
@@ -12,18 +14,20 @@ class Node:
             result += n.name + ', '
         return result[:-1]
 
-def buildDice() :
-    pickleIn = open ("dict3.pickle","rb")
-    w=pickle.load(pickleIn)
+
+def buildDice():
+    pickleIn = open("dict3k.pickle", "rb")
+    w = pickle.load(pickleIn)
     # print (w)
     for key in w:
-            
+
         wordlist = w[key]
         for w1 in wordlist:
                 # print (wordlist)
             for w2 in wordlist:
                 if w1 != w2:
                     inputGraph(w1, w2)
+
 
 def inputGraph(word1, word2):
 
@@ -47,11 +51,9 @@ def inputGraph(word1, word2):
             neighbours.append(Node(word1))
 
 
-   
-    
 Graph = {}
 
 buildDice()
 # file="words.txt"
 
-# buildWordGraph(file) 
+# buildWordGraph(file)
