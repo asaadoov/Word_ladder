@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='layout.css') }}"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <title>Word Ladder</title>
+  </head>
+
+  <body>
+    <header><h2>Word Ladder</h2></header>
+
+    <section class="main">
+      {% block content%}
+
+      <!-- the content of each page will be here -->
+
+      {%endblock%}
+    </section>
+    <footer>
+      <ul>
+        <li>Yousef</li>
+        <li>Sado</li>
+        <li>Akmal</li>
+        <li>Awad</li>
+        <li>Mouad</li>
+        <li>Asaad</li>
+      </ul>
+    </footer>
+  </body>
+</html>

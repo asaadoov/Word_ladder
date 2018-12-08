@@ -1,0 +1,18 @@
+{% extends "layout.html" %} {% block content%}
+<div class="successBody container">
+  <div class="result col-md-4">
+    <ul class="ulSuccess">
+      {% for word in path %}
+
+      <li class="liSuccess">{{ word }}</li>
+
+      {% if loop.index < len %}
+      <span><i class="fas fa-arrow-circle-right"></i></span>
+      {% else %}
+      <span></span>
+      {% endif %} {% endfor %}
+    </ul>
+  </div>
+  <form action="."><input type="submit" class="btn" value="Again!" /></form>
+</div>
+{% endblock %}

@@ -1,0 +1,203 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  font-family: sans-serif;
+  margin: 0;
+  background: url(./bg.jpg) no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 80px auto 80px;
+  grid-template-areas:
+    "hd"
+    "content"
+    "footer";
+  height: 100%;
+}
+
+.indexBody {
+  display: grid;
+  grid-template-columns: 50% 20% 30%;
+  grid-template-rows: auto;
+  grid-template-areas: "index_description index_inputBox dummy";
+}
+
+.successBody,
+.failureBody {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas: "result_area";
+}
+
+header,
+section,
+footer {
+  padding: 16px;
+  text-align: center;
+}
+
+header {
+  grid-area: hd;
+  color: #2ecc71;
+}
+
+.container {
+  min-height: 100%;
+  width: 80%;
+  margin: auto;
+}
+
+.description {
+  grid-area: index_description;
+  margin-right: 0;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #3498db;
+  line-height: 20px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.main {
+  min-height: 100%;
+  position: relative;
+  overflow: auto;
+}
+
+.inputBox {
+  grid-area: index_inputBox;
+  margin-left: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  color: white;
+  width: 280px;
+  overflow: hidden;
+  font-size: 20px;
+  padding: 4px 0;
+  margin: 4px 0;
+  text-align: center;
+}
+
+.inputBox h3 {
+  font-size: 25px;
+  border-bottom: 3px solid #4caf50;
+}
+
+.inputItem input {
+  outline: none;
+  background: none;
+  color: white;
+  font-size: 18px;
+  width: 80%;
+  margin: 8px 2px;
+  text-align: center;
+  border: 2px solid #3498db;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
+.inputItem input:focus {
+  width: 98%;
+  border-color: #2ecc71;
+}
+
+.btn {
+  outline: none;
+  background: none;
+  color: white;
+  font-size: 18px;
+  margin: 0 2px;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  border-radius: 20px;
+  width: 70px;
+  padding: 8px 4px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.btn:hover {
+  color: #2ecc71;
+  border-color: #3498db;
+}
+
+footer {
+  grid-area: footer;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  color: #2ecc71;
+}
+
+.ulSuccess span i {
+  text-decoration: none;
+  text-align: center;
+  font-size: 12px;
+  color: white;
+  margin: 0 2px;
+  padding: 0;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.liSuccess {
+  list-style: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  position: relative;
+  outline: none;
+  background: none;
+  color: #2ecc71;
+  font-size: 15px;
+  margin: 0 2px;
+  text-align: center;
+  border: 2px solid #3498db;
+  border-radius: 24px;
+  width: 18%;
+  padding: 6px 4px;
+  transition: 0.25s;
+}
+
+footer ul,
+.ulSuccess {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+footer li,
+.liSuccess {
+  margin: 10px;
+}
+
+.result {
+  grid-area: "result_area";
+}
+
+.msg {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 35px;
+  font-weight: 400;
+  color: #3498db;
+  line-height: 20px;
+  text-align: center;
+  margin: auto;
+}
