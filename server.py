@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 from bfs2 import Queue, bfs, getPath
 from buildGraph import Graph
+from checker import checker
 
 app = Flask(__name__)
 
@@ -13,8 +14,8 @@ def index():
 @app.route('/', methods=['POST'])
 def getInput():
 
-    word1 = (request.form['firstWord']).strip()
-    word2 = (request.form['lastWord']).strip()
+    word1 = (request.form['firstWord']).strip().lower()
+    word2 = (request.form['lastWord']).strip().lower()
 
     if ((word1 in Graph and word2 in Graph) and (len(word1) != len(word2))):
         return render_template('resultFailure.html', msg='The two words have different lengths')
@@ -37,12 +38,14 @@ def getInput():
                 predecessors = bfs(start, finish, Graph)
                 path = getPath(start, finish, predecessors)
                 length = len(path)
+                count = checker(word1, word2)
                 print(path, length)
-                if (length == 2):
+                print(count)
+                if ((length == 2) and (count > 1)):
                     return render_template('resultFailure.html', msg='There is no path between these two words in the list')
-                elif (length != 2):
+                else:
                     return render_template("resultSuccess.html", firstWord=word1, lastWord=word2, path=path, len=length)
 
 
 if __name__ == '__main__':
-    app.run(port=5026, debug=True)
+    app.run(port=5004, debug=True)

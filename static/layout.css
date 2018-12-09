@@ -62,6 +62,7 @@ header {
   color: #3498db;
   line-height: 20px;
   text-align: left;
+  padding: 16px;
   display: flex;
   align-items: center;
   flex-flow: row wrap;
@@ -191,6 +192,7 @@ footer li,
 .dropdown {
   position: relative;
   display: inline-block;
+  padding: 8px;
 }
 
 .dropdown-content {
@@ -199,23 +201,13 @@ footer li,
   z-index: 1;
 }
 
-/* .dropdown-content a {
-  padding: 10px 8px;
-  text-decoration: none;
-  display: block;
-} */
-
-.dropdown-content a {
-  text-decoration: none;
-}
-
 .dropdown-content a i {
   text-decoration: none;
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
   color: white;
   margin: 0 2px;
-  padding: 10px 8px;
+  padding: 8px;
   display: block;
   box-sizing: border-box;
 }
