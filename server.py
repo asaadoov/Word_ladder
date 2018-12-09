@@ -45,4 +45,4 @@ def getInput():
 
 
 if __name__ == '__main__':
-    app.run(port=5008, debug=True)
+    app.run(port=5026, debug=True)

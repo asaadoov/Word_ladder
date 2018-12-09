@@ -138,7 +138,7 @@ footer {
   position: absolute;
   width: 100%;
   left: 0;
-  bottom: 0;
+  bottom: 60px;
   color: #2ecc71;
 }
 
@@ -186,6 +186,43 @@ footer ul,
 footer li,
 .liSuccess {
   margin: 10px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+/* .dropdown-content a {
+  padding: 10px 8px;
+  text-decoration: none;
+  display: block;
+} */
+
+.dropdown-content a {
+  text-decoration: none;
+}
+
+.dropdown-content a i {
+  text-decoration: none;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  margin: 0 2px;
+  padding: 10px 8px;
+  display: block;
+  box-sizing: border-box;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 .result {
