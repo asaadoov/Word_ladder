@@ -18,9 +18,9 @@ def buildWordGraph(file):
     return w
 
 
-file = "oxford_3000.txt"
+file = "dict.txt"
 Dic = buildWordGraph(file)
 
-pickleOut = open("dict3k.pickle", "wb")
+pickleOut = open("dict.pickle", "wb")
 pickle.dump(Dic, pickleOut)
 pickleOut.close()

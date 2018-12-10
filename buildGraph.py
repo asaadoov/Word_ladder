@@ -16,7 +16,7 @@ class Node:
 
 
 def buildDice():
-    pickleIn = open("dict3k.pickle", "rb")
+    pickleIn = open("dict.pickle", "rb")
     w = pickle.load(pickleIn)
     # print (w)
     for key in w:
